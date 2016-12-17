@@ -1,5 +1,6 @@
 // Resets, Clearfix, etc
-
+@import "./partials/_reset";
+@import "./partials/_clearfix";
 // Variables
 
 // Media Query Ranges
@@ -8,7 +9,7 @@
 
 // Styles
 body{
-  background-color: orange;
+  background-color: magenta;
   text-align: center;
   color: #EEE;
 }
