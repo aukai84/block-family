@@ -8,14 +8,8 @@ $global-bright: white;
 $global-padding: 20px;
 $breakpoint-mobile-small: 600px;
 $breakpoint-mobile-large: 900px;
-// Media Query Ranges
-@media screen and (min-width: $breakpoint-mobile-small) and (max-width: $breakpoint-mobile-large){
-  body {
-    background-color: $global-light;
-    text-align: center;
-    color: $global-light;
-  }
-}
+
+
 // Mixins
 @mixin block_font($block_font_size: 25px, $block_font_color: $dark){
   font-size: $block_font_size;
@@ -23,9 +17,25 @@ $breakpoint-mobile-large: 900px;
 }
 // Styles
 body{
-  background-color: $global-light;
+  background-color: $global-dark;
   text-align: center;
-  color: $global-light;
+  color: $global-dark;
+}
+
+@media screen and (min-width: $breakpoint-mobile-small) and (max-width: $breakpoint-mobile-large){
+  body {
+    background-color: $global-light;
+    text-align: center;
+    color: $global-light;
+  }
+}
+
+@media screen and (max-width: 599px){
+  body {
+    background-color: $global-light;
+    text-align: center;
+    color: $global-bright;
+  }
 }
 
 h1, h2, h3, h4{
@@ -47,7 +57,23 @@ h2{
 }
 
 .block_family li{
-  background-color: #222;
+  background-color: $global-light;
   margin-bottom: 20px;
   padding: 20px;
+}
+
+@media screen and (min-width: $breakpoint-mobile-small) and (max-width: $breakpoint-mobile-large){
+  .block_family li{
+    background-color: $global-bright;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 599px){
+  .block_family li{
+    background-color: $global-dark;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
 }
